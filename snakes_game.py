@@ -9,9 +9,9 @@ def text_screen(text, size, color, x, y):
     gameWindow.blit(screen_text, [x, y])
 
 
-def snake_print(color, snake_list, size):
+def snake_print(snake_list):
     for x, y in snake_list:
-        pygame.draw.rect(gameWindow, color, [x, y, size, size])
+        gameWindow.blit(snake_body, (x, y))
 
 
 def welcome():
@@ -20,7 +20,7 @@ def welcome():
     vel = 3
     while not exit_game:
         # gameWindow.fill((255, 171, 87))
-        gameWindow.blit(wcbg, (0, 0))
+        gameWindow.blit(welcome_back, (0, 0))
         text_screen("SNAKES", 200, (0, 185, 255), 70, 20)
         text_screen("PLAY", 100, (174, 0, 178), 260, 250)
         text_screen("(SPACE)", 30, (174, 0, 178), 305, 350)
@@ -80,7 +80,7 @@ def game_loop(init_velocity):
     exit_game = False
     game_over = False
     pl = 1
-    size = 20
+    size = 40
     snake_x = 100
     snake_y = 100
     food_x = random.randint(100, screen_width - 100)
@@ -167,10 +167,10 @@ def game_loop(init_velocity):
                 game_over = True
 
             gameWindow.fill((0, 224, 255))
-            gameWindow.blit(gamebg, (50, 50))
-            pygame.draw.rect(gameWindow, (255, 171, 87), [food_x, food_y, size, size])
+            gameWindow.blit(game_back, (50, 50))
+            gameWindow.blit(apple, (food_x, food_y))
 
-            snake_print((217, 92, 38), snake_list, size)
+            snake_print(snake_list)
 
             text_screen(f"Score : {score} High Score : {high_score}", 30, (174, 0, 178), 5, 0)
             if snake_x >= (screen_width - 50 - size) or snake_x <= 50 or snake_y >= (
@@ -192,7 +192,7 @@ if __name__ == '__main__':
     over = pygame.mixer.Sound("sound_effects /over.mp3")
     eat = pygame.mixer.Sound("sound_effects /eat.wav")
     move = pygame.mixer.Sound("sound_effects /move.wav")
-    on = pygame.mixer.Sound("sound_effects /gamerun.mp3")
+    on = pygame.mixer.Sound("sound_effects /game_run.mp3")
 
     # Display
     screen_width = 700
@@ -202,10 +202,14 @@ if __name__ == '__main__':
     pygame.display.update()
 
     # images
-    wcbg = pygame.image.load("images/bgwel.jpeg")
-    wcbg = pygame.transform.scale(wcbg, (screen_width, screen_height)).convert_alpha()
-    gamebg = pygame.image.load("images/gamebg.jpeg")
-    gamebg = pygame.transform.scale(gamebg, (screen_width - 100, screen_height - 100)).convert_alpha()
+    welcome_back = pygame.image.load("images/welcome_back.jpeg")
+    welcome_back = pygame.transform.scale(welcome_back, (screen_width, screen_height)).convert_alpha()
+    game_back = pygame.image.load("images/game_back.jpeg")
+    game_back = pygame.transform.scale(game_back, (screen_width - 100, screen_height - 100)).convert_alpha()
+    snake_body = pygame.image.load("images/snake.png")
+    snake_body = pygame.transform.scale(snake_body, (30, 30)).convert_alpha()
+    apple = pygame.image.load("images/apple.png")
+    apple = pygame.transform.scale(apple, (40, 40)).convert_alpha()
 
     clock = pygame.time.Clock()
 
