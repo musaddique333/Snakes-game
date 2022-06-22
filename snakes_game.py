@@ -4,7 +4,8 @@ import time
 import os
 
 
-def text_screen(text, color, x, y):
+def text_screen(text, size, color, x, y):
+    font = pygame.font.SysFont("papyrus", size)
     screen_text = font.render(text, True, color)
     gameWindow.blit(screen_text, [x, y])
 
@@ -16,16 +17,20 @@ def snake_print(color, snake_list, size):
 
 def welcome():
     exit_game = False
-    vel = 5
+    vel = 3
     while not exit_game:
         gameWindow.fill(white)
-        text_screen("Welcome to the SNAKES", red, (screen_width / 2) - 200, (screen_height / 2) - 75)
-        text_screen("Enter SPACE to Play play the game", (255, 15, 150), (screen_width / 2) - 300, (screen_height / 2) - 25)
-        text_screen("Enter l to choose difficulty level", (55, 140, 250), (screen_width / 2) - 280, (screen_height / 2) + 25)
-        text_screen("Enter r to reset the high score", (100, 10, 110), (screen_width / 2) - 250, (screen_height / 2) + 75)
+        text_screen("SNAKES", 200, red, 70, 20)
+        text_screen("PLAY", 100, (255, 15, 150), 260, 250)
+        text_screen("(SPACE)", 30, (255, 15, 150), 305, 350)
+        text_screen("LEVEL", 100, (255, 15, 150), 240, 410)
+        text_screen("(l)", 30, (255, 15, 150), 340, 510)
+        text_screen("RESET HIGH SCORE", 50, (255, 15, 150), 180, 570)
+        text_screen("(r)", 30, (255, 15, 150), 340, 620)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 exit_game = True
+                exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
                     game_loop(vel)
@@ -45,17 +50,21 @@ def level():
     exit_game = False
     while not exit_game:
         gameWindow.fill(white)
-        text_screen("1 = Easy", red, 270, 100)
-        text_screen("2 = Medium", red, 250, 200)
-        text_screen("3 = Hard", red, 270, 300)
+        text_screen("LEVELS", 200, red, 80, 20)
+        text_screen("EASY", 70, red, 270, 300)
+        text_screen("(1)", 30, (255, 15, 150), 330, 370)
+        text_screen("MEDIUM", 70, red, 240, 400)
+        text_screen("(2)", 30, (255, 15, 150), 330, 470)
+        text_screen("HARD", 70, red, 270, 500)
+        text_screen("(3)", 30, (255, 15, 150), 330, 570)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 exit_game = True
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_1:
-                    return 1
+                    return 3
                 if event.key == pygame.K_2:
-                    return 5
+                    return 6
                 if event.key == pygame.K_3:
                     return 10
         pygame.display.update()
@@ -74,7 +83,7 @@ def game_loop(init_velocity):
     velocity_x = 0
     velocity_y = 0
     score = 0
-    fps = 30
+    fps = 60
     snake_list = []
     snake_len = 1
     precision = 20
@@ -89,8 +98,8 @@ def game_loop(init_velocity):
     while not exit_game:
         if game_over:
             pygame.draw.rect(gameWindow, white, [50, 50, screen_width - 100, screen_height - 100])
-            text_screen("Game Over", red, (screen_width / 2) - 100, (screen_height / 2) - 75)
-            text_screen("Press Enter", red, (screen_width / 2) - 100, (screen_height / 2) - 25)
+            text_screen("Game Over", 50, red, (screen_width / 2) - 100, (screen_height / 2) - 75)
+            text_screen("Press Enter", 50, red, (screen_width / 2) - 100, (screen_height / 2) - 25)
             game_over = True
 
             with open("High_score.txt", "w") as f:
@@ -139,7 +148,6 @@ def game_loop(init_velocity):
                 del snake_list[0]
             if temp in snake_list[:len(snake_list) - 1]:
                 game_over = True
-                time.sleep(3)
 
             gameWindow.fill(black)
             pygame.draw.rect(gameWindow, white, [50, 50, screen_width - 100, screen_height - 100])
@@ -147,11 +155,9 @@ def game_loop(init_velocity):
 
             snake_print(green, snake_list, size)
 
-            text_screen(f"Score : {score} High Score : {high_score}", red, 10, 10)
-            if snake_x == (screen_width - 50 - size) or snake_x == 50 or snake_y == (
-                    screen_height - 50 - size) or snake_y == 50:
+            text_screen(f"Score : {score} High Score : {high_score}", 50, red, 10, 10)
+            if snake_x == (screen_width - 50 - size) or snake_x == 50 or snake_y == (screen_height - 50 - size) or snake_y == 50:
                 game_over = True
-                time.sleep(3)
 
         clock.tick(fps)
         pygame.display.update()
@@ -165,7 +171,7 @@ if __name__ == '__main__':
     screen_width = 700
     screen_height = 700
     gameWindow = pygame.display.set_mode((screen_width, screen_height))
-    pygame.display.set_caption("Kunika Loves Musaddique")
+    pygame.display.set_caption("SNAKES BY MUSADDIQUE")
     pygame.display.update()
 
     # colors
@@ -175,7 +181,6 @@ if __name__ == '__main__':
     green = (0, 255, 0)
 
     clock = pygame.time.Clock()
-    font = pygame.font.SysFont(None, 50)
 
     welcome()
     pygame.quit()
