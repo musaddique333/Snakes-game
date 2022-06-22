@@ -1,7 +1,6 @@
-import pygame
-import random
-import time
 import os
+from numpy import random
+import pygame
 
 
 def text_screen(text, size, color, x, y):
@@ -16,24 +15,28 @@ def snake_print(color, snake_list, size):
 
 
 def welcome():
+    wc.play()
     exit_game = False
     vel = 3
     while not exit_game:
-        gameWindow.fill(white)
-        text_screen("SNAKES", 200, red, 70, 20)
-        text_screen("PLAY", 100, (255, 15, 150), 260, 250)
-        text_screen("(SPACE)", 30, (255, 15, 150), 305, 350)
-        text_screen("LEVEL", 100, (255, 15, 150), 240, 410)
-        text_screen("(l)", 30, (255, 15, 150), 340, 510)
-        text_screen("RESET HIGH SCORE", 50, (255, 15, 150), 180, 570)
-        text_screen("(r)", 30, (255, 15, 150), 340, 620)
+        # gameWindow.fill((255, 171, 87))
+        gameWindow.blit(wcbg, (0, 0))
+        text_screen("SNAKES", 200, (0, 185, 255), 70, 20)
+        text_screen("PLAY", 100, (174, 0, 178), 260, 250)
+        text_screen("(SPACE)", 30, (174, 0, 178), 305, 350)
+        text_screen("LEVEL", 100, (174, 0, 178), 240, 410)
+        text_screen("(l)", 30, (174, 0, 178), 340, 510)
+        text_screen("RESET HIGH SCORE", 50, (174, 0, 178), 180, 570)
+        text_screen("(r)", 30, (174, 0, 178), 340, 620)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 exit_game = True
                 exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
+                    wc.stop()
                     game_loop(vel)
+                    wc.play()
                 if event.key == pygame.K_r:
                     reset("High_score.txt")
                 if event.key == pygame.K_l:
@@ -49,13 +52,13 @@ def reset(file):
 def level():
     exit_game = False
     while not exit_game:
-        gameWindow.fill(white)
-        text_screen("LEVELS", 200, red, 80, 20)
-        text_screen("EASY", 70, red, 270, 300)
+        gameWindow.fill((255, 171, 87))
+        text_screen("LEVELS", 200, (255, 0, 166), 80, 20)
+        text_screen("EASY", 70, (255, 0, 166), 270, 300)
         text_screen("(1)", 30, (255, 15, 150), 330, 370)
-        text_screen("MEDIUM", 70, red, 240, 400)
+        text_screen("MEDIUM", 70, (255, 0, 166), 240, 400)
         text_screen("(2)", 30, (255, 15, 150), 330, 470)
-        text_screen("HARD", 70, red, 270, 500)
+        text_screen("HARD", 70, (255, 0, 166), 270, 500)
         text_screen("(3)", 30, (255, 15, 150), 330, 570)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -72,14 +75,16 @@ def level():
 
 
 def game_loop(init_velocity):
+    on.play()
     # Game specific variables
     exit_game = False
     game_over = False
+    pl = 1
     size = 20
     snake_x = 100
     snake_y = 100
-    food_x = random.randint(50, screen_width - 50)
-    food_y = random.randint(50, screen_height - 50)
+    food_x = random.randint(100, screen_width - 100)
+    food_y = random.randint(100, screen_height - 100)
     velocity_x = 0
     velocity_y = 0
     score = 0
@@ -89,7 +94,7 @@ def game_loop(init_velocity):
     precision = 20
 
     # High score
-    if (not os.path.exists("High_score.txt")):
+    if not os.path.exists("High_score.txt"):
         with open("High_score.txt", "w") as f:
             f.write("0")
     with open("High_score.txt", "r") as f:
@@ -97,35 +102,45 @@ def game_loop(init_velocity):
 
     while not exit_game:
         if game_over:
-            pygame.draw.rect(gameWindow, white, [50, 50, screen_width - 100, screen_height - 100])
-            text_screen("Game Over", 50, red, (screen_width / 2) - 100, (screen_height / 2) - 75)
-            text_screen("Press Enter", 50, red, (screen_width / 2) - 100, (screen_height / 2) - 25)
-            game_over = True
+            if pl == 1:
+                over.play()
+                pl += 1
+            pygame.draw.rect(gameWindow, (217, 92, 38), [50, 50, screen_width - 100, screen_height - 100])
+            text_screen("Game Over", 50, (255, 255, 255), (screen_width / 2) - 100, (screen_height / 2) - 75)
+            text_screen("Press Enter", 50, (174, 255, 255), (screen_width / 2) - 105, (screen_height / 2) - 25)
 
             with open("High_score.txt", "w") as f:
                 f.write(high_score)
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
+                    on.stop()
                     exit_game = True
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_RETURN:
+                        over.stop()
+                        on.stop()
                         welcome()
         else:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
+                    on.stop()
                     exit_game = True
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_RIGHT:
+                        move.play()
                         velocity_x = init_velocity
                         velocity_y = 0
                     if event.key == pygame.K_LEFT:
+                        move.play()
                         velocity_x = -init_velocity
                         velocity_y = 0
                     if event.key == pygame.K_UP:
+                        move.play()
                         velocity_y = -init_velocity
                         velocity_x = 0
                     if event.key == pygame.K_DOWN:
+                        move.play()
                         velocity_y = init_velocity
                         velocity_x = 0
                     if event.key == pygame.K_SPACE:
@@ -135,9 +150,11 @@ def game_loop(init_velocity):
             snake_x += velocity_x
             snake_y += velocity_y
             if abs(snake_x - food_x) < precision and abs(snake_y - food_y) < precision:
+                eat.set_volume(10.0)
+                eat.play()
                 score += 10
-                food_x = random.randint(200, 500)
-                food_y = random.randint(200, 500)
+                food_x = random.randint(100, screen_width - 100)
+                food_y = random.randint(100, screen_height - 100)
                 snake_len += 10
                 if score > int(high_score):
                     high_score = str(score)
@@ -149,14 +166,15 @@ def game_loop(init_velocity):
             if temp in snake_list[:len(snake_list) - 1]:
                 game_over = True
 
-            gameWindow.fill(black)
-            pygame.draw.rect(gameWindow, white, [50, 50, screen_width - 100, screen_height - 100])
-            pygame.draw.rect(gameWindow, red, [food_x, food_y, size, size])
+            gameWindow.fill((0, 224, 255))
+            gameWindow.blit(gamebg, (50, 50))
+            pygame.draw.rect(gameWindow, (255, 171, 87), [food_x, food_y, size, size])
 
-            snake_print(green, snake_list, size)
+            snake_print((217, 92, 38), snake_list, size)
 
-            text_screen(f"Score : {score} High Score : {high_score}", 50, red, 10, 10)
-            if snake_x == (screen_width - 50 - size) or snake_x == 50 or snake_y == (screen_height - 50 - size) or snake_y == 50:
+            text_screen(f"Score : {score} High Score : {high_score}", 30, (174, 0, 178), 5, 0)
+            if snake_x >= (screen_width - 50 - size) or snake_x <= 50 or snake_y >= (
+                    screen_height - 50 - size) or snake_y <= 50:
                 game_over = True
 
         clock.tick(fps)
@@ -167,6 +185,15 @@ if __name__ == '__main__':
     os.system("clear")
     pygame.init()
 
+    # Music
+    os.getcwd()
+    pygame.mixer.init()
+    wc = pygame.mixer.Sound("sound_effects /welcome.mp3")
+    over = pygame.mixer.Sound("sound_effects /over.mp3")
+    eat = pygame.mixer.Sound("sound_effects /eat.wav")
+    move = pygame.mixer.Sound("sound_effects /move.wav")
+    on = pygame.mixer.Sound("sound_effects /gamerun.mp3")
+
     # Display
     screen_width = 700
     screen_height = 700
@@ -174,11 +201,11 @@ if __name__ == '__main__':
     pygame.display.set_caption("SNAKES BY MUSADDIQUE")
     pygame.display.update()
 
-    # colors
-    red = (255, 0, 0)
-    white = (255, 255, 255)
-    black = (0, 0, 0)
-    green = (0, 255, 0)
+    # images
+    wcbg = pygame.image.load("images/bgwel.jpeg")
+    wcbg = pygame.transform.scale(wcbg, (screen_width, screen_height)).convert_alpha()
+    gamebg = pygame.image.load("images/gamebg.jpeg")
+    gamebg = pygame.transform.scale(gamebg, (screen_width - 100, screen_height - 100)).convert_alpha()
 
     clock = pygame.time.Clock()
 
