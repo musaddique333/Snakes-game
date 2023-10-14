@@ -5,64 +5,71 @@
 [![GitHub forks](https://img.shields.io/github/forks/yourusername/snake-game)](https://github.com/yourusername/snake-game/network)
 [![GitHub issues](https://img.shields.io/github/issues/yourusername/snake-game)](https://github.com/yourusername/snake-game/issues)
 
-![Snake Game Screenshot](screenshot.png)
+<div align="center">
+    <img src="Screenshot 2022-11-12 at 12.56.11 PM.png" alt="Snake Game Screenshot 1" width="600">
+</div>
 
-[![Python](https://img.shields.io/badge/Python-3.8-blue)](https://www.python.org/)
-[![Pygame](https://img.shields.io/badge/Pygame-2.0-orange)](https://www.pygame.org/)
-[![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green)](https://docs.python.org/3/library/tkinter.html)
+<div align="center">
+    <img src="Screenshot 2022-11-12 at 12.57.36 PM.png" alt="Snake Game Screenshot 2" width="200">
+    <img src="Screenshot 2022-11-12 at 12.58.12 PM.png" alt="Snake Game Screenshot 3" width="200">
+    <img src="Screenshot 2022-11-12 at 12.58.25 PM.png" alt="Snake Game Screenshot 4" width="200">
+    <img src="Screenshot 2022-11-12 at 12.58.42 PM.png" alt="Snake Game Screenshot 5" width="200">
+</div>
+
+
+[![Python](https://img.shields.io/badge/Python-3.7-blue)](https://www.python.org/)
+[![Pygame](https://img.shields.io/badge/Pygame-2.0-yellow)](https://www.pygame.org/)
+[![Tkinter](https://img.shields.io/badge/Tkinter-8.6-green)](https://docs.python.org/3/library/tkinter.html)
 
 ## What I Learned 🧠
 
-Throughout the development of this Snake Game project, I gained a wealth of knowledge and practical experience, including:
+In the development of this Snake Game project, I acquired valuable knowledge and skills, including:
 
-1. **Game Development** 🎮: I dived into game development using Python and the Pygame library, learning about game loops, event handling, and sprite rendering.
+1. **Game Development with Pygame** 🎮: I learned how to create a 2D game using Pygame, a popular Python library for game development.
 
-2. **Sound Integration** 🔊: I incorporated sound effects into the game, enhancing the player's experience and creating a more immersive atmosphere.
+2. **Collision Detection** 🚧: I implemented collision detection to handle interactions between the snake and food, ensuring game logic runs smoothly.
 
-3. **Game Logic** 🐍: I developed the game's logic, including collision detection, scoring, and game over conditions, to create a challenging and engaging gaming experience.
+3. **Game Over Conditions** ⚠️: I developed game over conditions for scenarios like snake collision with walls and self, providing players with a clear end to the game.
 
-4. **High Score Handling** 🏆: I implemented a high score system, allowing players to compete against their previous best scores.
+4. **High Score Tracking** 🏆: I implemented a high score system, storing and updating high scores in a text file.
 
-5. **Python Skills** 🐍: This project improved my Python skills, reinforcing my understanding of data structures, control flow, and file handling.
+5. **User Interface with Tkinter** 💼: I added a user interface for level selection using Tkinter, enabling players to choose game difficulty.
 
-6. **Tkinter User Interface** 🖼️: I also learned to use Tkinter for creating graphical user interfaces (GUI). Tkinter was used for the initial welcome screen and level selection, adding a user-friendly interface to the game.
+6. **Sound Effects and Music Integration** 🔊: I incorporated sound effects and music to enhance the gaming experience, making it more immersive.
 
-By creating this Snake Game, I've not only honed my coding skills but also delved into the exciting world of game development and GUI design. It's been a fun and educational journey!
+The development of this Snake Game project has not only improved my Python programming skills but also introduced me to the world of game development and user interface design.
 
 ## Table of Contents 📜
 - [Description](#description)
 - [Demo](#demo)
-- [Python and Pygame](#python-and-pygame)
-- [Tkinter GUI](#tkinter-gui)
-- [Sound Effects](#sound-effects)
-- [High Score System](#high-score-system)
+- [Game Development with Pygame](#game-development-with-pygame)
+- [User Interface with Tkinter](#user-interface-with-tkinter)
 - [License](#license)
 - [Author](#author)
 
 ## Description 📝
-This classic Snake Game is brought to life with Python and Pygame. Control the snake to eat food and grow while avoiding collisions with the walls and yourself. Try to achieve the highest score and challenge your friends to beat it!
+This Snake Game is a classic 2D arcade game in which the player controls a snake to eat food and grow longer. The game features various levels of difficulty, and the goal is to achieve the highest possible score without colliding with the walls or the snake's own body.
 
 ## Demo 🚀
-You can play the Snake Game by following this link: [Play Snake Game](https://yourusername.github.io/snake-game/)
+You can play the Snake Game by running the Python script in your local environment. Choose your preferred level, control the snake, eat the food, and aim for the high score.
 
-## Python and Pygame 🐍🕹️
-The game's core logic is built in Python, and Pygame, a popular Python library, is used for rendering and game development. It handles the game loop, collision detection, and sprite rendering.
+## Game Development with Pygame 🎮
+The Snake Game is developed using Pygame, a Python library for game development. Key features and elements of the game include:
+- Snake movement and control.
+- Food generation and collision detection.
+- High score tracking and updates.
+- Game over conditions.
+- Sound effects and music integration.
 
-## Tkinter GUI 🖼️
-The game features a user-friendly graphical user interface (GUI) created with Tkinter. Tkinter is used for the initial welcome screen and level selection, making the game accessible and enjoyable for players.
-
-## Sound Effects 🔊
-Sound effects are integrated into the game to provide an immersive gaming experience. Enjoy the sounds of eating, moving, and game over moments!
-
-## High Score System 🏆
-Challenge yourself to beat your highest score! The game includes a high score system that keeps track of your best achievements. Can you reach the top of the leaderboard?
+## User Interface with Tkinter 💼
+The project also includes a user interface developed with Tkinter. Players can choose from different game difficulty levels, making the game accessible to a wide range of players.
 
 ## License 📜
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Author 👨‍💻
-- Author: yourusername [![GitHub](https://img.shields.io/badge/GitHub-yourusername-brightgreen)](https://github.com/yourusername)
+- Author: musaddique333 [![GitHub](https://img.shields.io/badge/GitHub-musaddique333-brightgreen)](https://github.com/musaddique333)
 
 ---
 
-Have fun playing the Snake Game! If you have any questions or feedback, please don't hesitate to reach out. Enjoy the nostalgia of this classic game! 🐍🎮
+Enjoy playing the Snake Game! If you have any questions or feedback, please don't hesitate to reach out. 🐍
