@@ -4,6 +4,9 @@
 [![GitHub stars](https://img.shields.io/github/stars/musaddique333/snakes-game)](https://github.com/musaddique333/snakes-game/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/musaddique333/snakes-game)](https://github.com/musaddique333/snakes-game/network)
 [![GitHub issues](https://img.shields.io/github/issues/musaddique333/snakes-game)](https://github.com/musaddique333/snakes-game/issues)
+[![Python](https://img.shields.io/badge/Python-3.7-blue)](https://www.python.org/)
+[![Pygame](https://img.shields.io/badge/Pygame-2.0-yellow)](https://www.pygame.org/)
+[![Tkinter](https://img.shields.io/badge/Tkinter-8.6-green)](https://docs.python.org/3/library/tkinter.html)
 
 <div align="center">
     <img src="./screenshots/screenshot1.png" alt="snakes Game Screenshot 1" width="600">
@@ -16,11 +19,6 @@
     <img src="./screenshots/screenshot5.png" alt="snakes Game Screenshot 5" width="200">
 </div>
 
-
-
-[![Python](https://img.shields.io/badge/Python-3.7-blue)](https://www.python.org/)
-[![Pygame](https://img.shields.io/badge/Pygame-2.0-yellow)](https://www.pygame.org/)
-[![Tkinter](https://img.shields.io/badge/Tkinter-8.6-green)](https://docs.python.org/3/library/tkinter.html)
 
 ## What I Learned 🧠
 
