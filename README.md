@@ -1,19 +1,19 @@
-# Snake Game 🐍
+# snakes Game 🐍
 
-[![GitHub](https://img.shields.io/github/license/musaddique333/snake-game)](https://github.com/musaddique333/snake-game/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/musaddique333/snake-game)](https://github.com/musaddique333/snake-game/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/musaddique333/snake-game)](https://github.com/musaddique333/snake-game/network)
-[![GitHub issues](https://img.shields.io/github/issues/musaddique333/snake-game)](https://github.com/musaddique333/snake-game/issues)
+[![GitHub](https://img.shields.io/github/license/musaddique333/snakes-game)](https://github.com/musaddique333/snakes-game/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/musaddique333/snakes-game)](https://github.com/musaddique333/snakes-game/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/musaddique333/snakes-game)](https://github.com/musaddique333/snakes-game/network)
+[![GitHub issues](https://img.shields.io/github/issues/musaddique333/snakes-game)](https://github.com/musaddique333/snakes-game/issues)
 
 <div align="center">
-    <img src="./screenshots/screenshot1.png" alt="Snake Game Screenshot 1" width="600">
+    <img src="./screenshots/screenshot1.png" alt="snakes Game Screenshot 1" width="600">
 </div>
 
 <div align="center">
-    <img src="./screenshots/screenshot2.png" alt="Snake Game Screenshot 2" width="200">
-    <img src="./screenshots/screenshot3.png" alt="Snake Game Screenshot 3" width="200">
-    <img src="./screenshots/screenshot4.png" alt="Snake Game Screenshot 4" width="200">
-    <img src="./screenshots/screenshot5.png" alt="Snake Game Screenshot 5" width="200">
+    <img src="./screenshots/screenshot2.png" alt="snakes Game Screenshot 2" width="200">
+    <img src="./screenshots/screenshot3.png" alt="snakes Game Screenshot 3" width="200">
+    <img src="./screenshots/screenshot4.png" alt="snakes Game Screenshot 4" width="200">
+    <img src="./screenshots/screenshot5.png" alt="snakes Game Screenshot 5" width="200">
 </div>
 
 
@@ -24,13 +24,13 @@
 
 ## What I Learned 🧠
 
-In the development of this Snake Game project, I acquired valuable knowledge and skills, including:
+In the development of this snakes Game project, I acquired valuable knowledge and skills, including:
 
 1. **Game Development with Pygame** 🎮: I learned how to create a 2D game using Pygame, a popular Python library for game development.
 
-2. **Collision Detection** 🚧: I implemented collision detection to handle interactions between the snake and food, ensuring game logic runs smoothly.
+2. **Collision Detection** 🚧: I implemented collision detection to handle interactions between the snakes and food, ensuring game logic runs smoothly.
 
-3. **Game Over Conditions** ⚠️: I developed game over conditions for scenarios like snake collision with walls and self, providing players with a clear end to the game.
+3. **Game Over Conditions** ⚠️: I developed game over conditions for scenarios like snakes collision with walls and self, providing players with a clear end to the game.
 
 4. **High Score Tracking** 🏆: I implemented a high score system, storing and updating high scores in a text file.
 
@@ -38,7 +38,7 @@ In the development of this Snake Game project, I acquired valuable knowledge and
 
 6. **Sound Effects and Music Integration** 🔊: I incorporated sound effects and music to enhance the gaming experience, making it more immersive.
 
-The development of this Snake Game project has not only improved my Python programming skills but also introduced me to the world of game development and user interface design.
+The development of this snakes Game project has not only improved my Python programming skills but also introduced me to the world of game development and user interface design.
 
 ## Table of Contents 📜
 - [Description](#description)
@@ -49,14 +49,14 @@ The development of this Snake Game project has not only improved my Python progr
 - [Author](#author)
 
 ## Description 📝
-This Snake Game is a classic 2D arcade game in which the player controls a snake to eat food and grow longer. The game features various levels of difficulty, and the goal is to achieve the highest possible score without colliding with the walls or the snake's own body.
+This snakes Game is a classic 2D arcade game in which the player controls a snakes to eat food and grow longer. The game features various levels of difficulty, and the goal is to achieve the highest possible score without colliding with the walls or the snakes's own body.
 
 ## Demo 🚀
-You can play the Snake Game by running the Python script in your local environment. Choose your preferred level, control the snake, eat the food, and aim for the high score.
+You can play the snakes Game by running the Python script in your local environment. Choose your preferred level, control the snakes, eat the food, and aim for the high score.
 
 ## Game Development with Pygame 🎮
-The Snake Game is developed using Pygame, a Python library for game development. Key features and elements of the game include:
-- Snake movement and control.
+The snakes Game is developed using Pygame, a Python library for game development. Key features and elements of the game include:
+- snakes movement and control.
 - Food generation and collision detection.
 - High score tracking and updates.
 - Game over conditions.
@@ -73,4 +73,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Enjoy playing the Snake Game! If you have any questions or feedback, please don't hesitate to reach out. 🐍
+Enjoy playing the snakes Game! If you have any questions or feedback, please don't hesitate to reach out. 🐍
