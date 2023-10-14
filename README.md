@@ -1,9 +1,9 @@
 # Snake Game 🐍
 
-[![GitHub](https://img.shields.io/github/license/yourusername/snake-game)](https://github.com/yourusername/snake-game/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/snake-game)](https://github.com/yourusername/snake-game/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/snake-game)](https://github.com/yourusername/snake-game/network)
-[![GitHub issues](https://img.shields.io/github/issues/yourusername/snake-game)](https://github.com/yourusername/snake-game/issues)
+[![GitHub](https://img.shields.io/github/license/musaddique333/snake-game)](https://github.com/musaddique333/snake-game/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/musaddique333/snake-game)](https://github.com/musaddique333/snake-game/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/musaddique333/snake-game)](https://github.com/musaddique333/snake-game/network)
+[![GitHub issues](https://img.shields.io/github/issues/musaddique333/snake-game)](https://github.com/musaddique333/snake-game/issues)
 
 <div align="center">
     <img src="./screenshots/screenshot1.png" alt="Snake Game Screenshot 1" width="600">
