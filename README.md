@@ -54,6 +54,15 @@ Before you begin, ensure you have met the following requirements:
    ```sh
    git clone https://github.com/musaddique333/Snakes-game.git
 
+## Controls
+
+- **Move the Snake:**
+  - Use the arrow keys (Up, Down, Left, Right).
+
+- **Other Controls:**
+  - Pause the game: Press the `Space` key.
+  - Increase precision: Press the `F` key.
+
 ## Table of Contents 📜
 - [Description](#description)
 - [Demo](#demo)
