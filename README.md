@@ -38,6 +38,22 @@ In the development of this snakes Game project, I acquired valuable knowledge an
 
 The development of this snakes Game project has not only improved my Python programming skills but also introduced me to the world of game development and user interface design.
 
+Before you begin, ensure you have met the following requirements:
+
+- **Python**: Make sure you have Python 3 installed on your system. If not, you can download and install Python from [here](https://www.python.org/downloads/).
+
+- **Pygame Library**: You'll need the Pygame library. You can install it using pip:
+
+  ```bash
+  pip install pygame
+### Getting Started 🚀
+
+#### Clone the Repository
+
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/musaddique333/Snakes-game.git
+
 ## Table of Contents 📜
 - [Description](#description)
 - [Demo](#demo)
