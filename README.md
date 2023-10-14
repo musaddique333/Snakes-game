@@ -19,13 +19,6 @@
     <img src="./screenshot/Screenshot 2022-11-12 at 12.56.11 PM.png" alt="Snake Game Screenshot 1" width="600">
 </div>
 
-<div align="center">
-    <img src="./screenshot/Screenshot 2022-11-12 at 12.57.36 PM.png" alt="Snake Game Screenshot 2" width="200">
-    <img src="./screenshot/Screenshot 2022-11-12 at 12.58.12 PM.png" alt="Snake Game Screenshot 3" width="200">
-    <img src="./screenshot/Screenshot 2022-11-12 at 12.58.25 PM.png" alt="Snake Game Screenshot 4" width="200">
-    <img src="./screenshot/Screenshot 2022-11-12 at 12.58.42 PM.png" alt="Snake Game Screenshot 5" width="200">
->>>>>>> c1fd67a93552274834968bb8fed5e30a8ff26bae
-</div>
 
 
 [![Python](https://img.shields.io/badge/Python-3.7-blue)](https://www.python.org/)
