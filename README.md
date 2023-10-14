@@ -6,7 +6,6 @@
 [![GitHub issues](https://img.shields.io/github/issues/yourusername/snake-game)](https://github.com/yourusername/snake-game/issues)
 
 <div align="center">
-<<<<<<< HEAD
     <img src="./screenshots/screenshot1.png" alt="Snake Game Screenshot 1" width="600">
 </div>
 
@@ -15,8 +14,6 @@
     <img src="./screenshots/screenshot3.png" alt="Snake Game Screenshot 3" width="200">
     <img src="./screenshots/screenshot4.png" alt="Snake Game Screenshot 4" width="200">
     <img src="./screenshots/screenshot5.png" alt="Snake Game Screenshot 5" width="200">
-=======
-    <img src="./screenshot/Screenshot 2022-11-12 at 12.56.11 PM.png" alt="Snake Game Screenshot 1" width="600">
 </div>
 
 
